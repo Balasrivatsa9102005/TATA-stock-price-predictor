@@ -17,9 +17,9 @@ def load_model(filename):
     return model
 
 models = {
-    "Tata Motors": load_model("tata_motors_xgb.pkl"),
-    "Tata Steel": load_model("tata_steel_xgb.pkl"),
-    "TCS": load_model("tcs_xgb.pkl")
+    "Tata Motors": load_model("TATA_motors_xgb.pkl"),
+    "Tata Steel": load_model("TATA_steel_xgb.pkl"),
+    "TCS": load_model("TCS_xgb.pkl")
 }
 
 
