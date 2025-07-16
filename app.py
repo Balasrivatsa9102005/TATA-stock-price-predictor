@@ -8,13 +8,13 @@ from streamlit_option_menu import option_menu
 st.set_page_config(page_title="Stock Price Predictor", layout="centered")
 
 
-model_dir = r"C:\Users\balas\OneDrive\Desktop\Balu\Myprojects\vs\spp\models"
 
 @st.cache_resource
-def load_model(file_name):
-    path = os.path.join(model_dir, file_name)
-    with open(path, "rb") as file:
-        return pickle.load(file)
+def load_model(filename):
+    model_path = os.path.join("models", filename)
+    with open(model_path, "rb") as file:
+        model = pickle.load(file)
+    return model
 
 models = {
     "Tata Motors": load_model("tata_motors_xgb.pkl"),
